@@ -130,7 +130,7 @@ export default class ViewPager extends Component {
 
     _onScrollViewLayout (event) {
         let {width, height} = event.nativeEvent.layout
-        this.setState({width, height}, () => Platform.OS === 'ios' && this.setPageWithoutAnimation(this.state.page))
+        this.setState({width, height}, () => this.setPageWithoutAnimation(this.state.page))
     }
 
     _childrenWithOverridenStyle () {
